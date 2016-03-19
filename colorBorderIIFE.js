@@ -1,10 +1,15 @@
 var CarLot = (function(newCarLot){
 
-  
-return newCarLot;
+
+  newCarLot.changeBGAndBorder = function() {
+    
+  };
+
+  newCarLot.resetBGAndBorder = function() {
+
+  };
+
+  return newCarLot;
 })(CarLot||{});
 
 
-addColorBorder = function() {
-  
-}
