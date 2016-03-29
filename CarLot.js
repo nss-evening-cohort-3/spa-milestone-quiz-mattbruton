@@ -1,40 +1,40 @@
-var CarLot = (function () {
-  var inventory = [];
+var CarLot = (function() {
+    var inventory = [];
 
-  return {
+    return {
 
-    /* function to return contents of inventory.json */
+        /* function to return contents of inventory.json */
 
-    getInventory: function () {
-      return inventory;
-    },
+        getInventory: function() {
+            return inventory;
+        },
 
-    /* fairly standard XHR with event listeners for success and failure of concerning retrieval
-    data in JSON file. */
+        /* fairly standard XHR with event listeners for success and failure of concerning retrieval
+        data in JSON file. */
 
-    loadInventory: function (callback) {
-      var inventoryLoader = new XMLHttpRequest();
+        loadInventory: function(callback) {
+            var inventoryLoader = new XMLHttpRequest();
 
-      inventoryLoader.addEventListener("load", loadSuccess);
-      inventoryLoader.addEventListener("failed", loadFail);
+            inventoryLoader.addEventListener("load", loadSuccess);
+            inventoryLoader.addEventListener("failed", loadFail);
 
-      inventoryLoader.open("GET", "inventory.json");
-      inventoryLoader.send();
+            inventoryLoader.open("GET", "inventory.json");
+            inventoryLoader.send();
 
-      /* run if unable to retrieve JSON data */
+            /* run if unable to retrieve JSON data */
 
-      function loadFail() {
-        console.log("Unable to load data.")
-      };
+            function loadFail() {
+                console.log("Unable to load data.")
+            };
 
-      /* run this if the JSON file successfully loaded */
+            /* run this if the JSON file successfully loaded */
 
-      function loadSuccess() {
-        inventory = JSON.parse(this.responseText).cars;
-        callback();
-      };
+            function loadSuccess() {
+                inventory = JSON.parse(this.responseText).cars;
+                callback();
+            };
 
-    }
-  };
+        }
+    };
 
 })();
