@@ -1,14 +1,16 @@
 var CarLot = (function(newCarLot){
 
-  // click event for clicking on specific car div
+  /* This function runs all the event listeners contained in the colorBorderIIFE.js file. No reason to really 
+  separate them this way, but was just playing around with IIFE's :) */
 
-  // click event for clearing text input in navbar and putting cursor in text input box
+  newCarLot.activateEvents = function() {
+    CarLot.clearTextInputOnClick();
+    CarLot.resetBGAndBorder();
+    CarLot.changeClassForStyle();
+    CarLot.styleChanger("selectedCar", "lightblue");
+    CarLot.changeDescriptionToInput();
 
-  // keypress event for changing decription to be equal to input
-
-
-
-
+  };
 
 return newCarLot;
 })(CarLot||{});

@@ -3,13 +3,15 @@ var CarLot = (function () {
 
   return {
 
-    // function to return contents of inventory.json 
+    /* function to return contents of inventory.json */
+
     getInventory: function () {
       return inventory;
     },
 
     /* fairly standard XHR with event listeners for success and failure of concerning retrieval
     data in JSON file. */
+
     loadInventory: function (callback) {
       var inventoryLoader = new XMLHttpRequest();
 
@@ -19,12 +21,14 @@ var CarLot = (function () {
       inventoryLoader.open("GET", "inventory.json");
       inventoryLoader.send();
 
-      // run if unable to retrieve JSON data
+      /* run if unable to retrieve JSON data */
+
       function loadFail() {
         console.log("Unable to load data.")
       };
 
-      // run this if the JSON file successfully loaded
+      /* run this if the JSON file successfully loaded */
+
       function loadSuccess() {
         inventory = JSON.parse(this.responseText).cars;
         callback();

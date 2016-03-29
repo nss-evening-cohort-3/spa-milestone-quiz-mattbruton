@@ -1,10 +1,11 @@
 function populatePage (inventory) {
 
   var htmlContainer = document.getElementById('container');
+  
   var carString;
 
     // Loop over the inventory and populate the DOM.
-    
+
   for (var i = 0; i < inventory.length; i++) {
 
     /* If the value in the JSON file for the purchased key is true, the div will be built this way
@@ -15,10 +16,10 @@ function populatePage (inventory) {
       carString = `<div class="col-sm-4 car sold" style="border: 3px solid ${inventory[i].color};">`;
       carString += `<h1>${inventory[i].make}</h1>`;
       carString += `<h2>${inventory[i].model}</h2>`;
-      carString += `<img class="soldImg" src="sold.png">`;
       carString += `<h4>Year: ${inventory[i].year}</h4>`;
       carString += `<h4>Price: $${inventory[i].price}</h4>`;
       carString += `<p>${inventory[i].description}</p>`;
+      carString += `<img class="soldImg" src="sold.png">`;
       carString += `</div>`;
       htmlContainer.innerHTML += carString;
 
@@ -33,6 +34,7 @@ function populatePage (inventory) {
       carString += `<h4>Year: ${inventory[i].year}</h4>`;
       carString += `<h4>Price: $${inventory[i].price}</h4>`;
       carString += `<p>${inventory[i].description}</p>`;
+      carString += `<img class="blankImg" src="blank.png">`;
       carString += `</div>`;
       htmlContainer.innerHTML += carString;
 };
@@ -40,7 +42,7 @@ function populatePage (inventory) {
     // Now that the DOM is loaded, establish all the event listeners needed
   }
 
-  // CarLot.activateEvents();
+  CarLot.activateEvents();
 
 };
 
@@ -48,7 +50,6 @@ function populatePage (inventory) {
   invoked after the process is complete */
 
 CarLot.loadInventory(carsToDOM);
-
 
 function carsToDOM(){
     var carInventory = CarLot.getInventory();

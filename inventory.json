@@ -6,7 +6,7 @@
       "year": "2006",
       "price": "8999",
       "color": "FireBrick",
-      "purchased": false,
+      "purchased": true,
       "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
     },
     {
@@ -15,8 +15,8 @@
       "year": "1978",
       "price": "699",
       "color": "Brown",
-      "purchased": true,
-      "description": "It had seats."
+      "purchased": false,
+      "description": "It had seats... Sometimes it starts up, which is great when you want to get away!"
     },
     {
       "make": "De Lorean",
