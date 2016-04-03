@@ -4,13 +4,17 @@ var CarLot = (function(newCarLot) {
     separate them this way, but was just playing around with IIFE's :) */
 
     newCarLot.activateEvents = function() {
-        CarLot.clearTextInputOnClick();
-        CarLot.resetBGAndBorder();
-        CarLot.changeClassForStyle();
-        CarLot.styleChanger("selectedCar", "lightblue");
-        CarLot.changeDescriptionToInput();
-
+        container.addEventListener("click", function() {
+            CarLot.clearTextInputOnClick();
+            CarLot.resetBGAndBorder();
+            CarLot.changeClassForStyle();
+            CarLot.styleChanger("selectedCar", "lightblue");
+        });
+        textInput.addEventListener("keyup", function(event) {
+            CarLot.changeDescriptionToInput();
+        });
     };
+
 
     return newCarLot;
 })(CarLot || {});
