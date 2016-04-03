@@ -8,7 +8,6 @@ var CarLot = (function(newCarLot) {
             CarLot.clearTextInputOnClick();
             CarLot.resetBGAndBorder();
             CarLot.changeClassForStyle();
-            CarLot.styleChanger("selectedCar", "lightblue");
         });
         textInput.addEventListener("keyup", function(event) {
             CarLot.changeDescriptionToInput();

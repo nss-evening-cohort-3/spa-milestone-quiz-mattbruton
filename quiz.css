@@ -3,6 +3,7 @@ body {
 }
 
 .car {
+  border-style: solid;
   border-width: medium;
   background-color: #f0f0f0;
   padding: 0px;
@@ -34,10 +35,6 @@ body {
 
 .selectedCar {
   border-width: thick;
-  background-color: #lightblue;
+  background-color: lightblue;
 }
 
-.notSelected {
-  border-width: medium;
-  background-color: #f0f0f0;
-}

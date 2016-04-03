@@ -6,13 +6,11 @@ var CarLot = (function(newCarLot) {
     newCarLot.resetBGAndBorder = function() {
         for (var i = 0; i < carDiv.length; i++) {
             carDiv[i].classList.remove('selectedCar');
-            carDiv[i].style.borderWidth = "medium";
-            carDiv[i].style.backgroundColor = "#f0f0f0"
         };
     };
 
-    /* Adds function for event listener on container div that gives the selected car element a class of "selectedCar". This function
-    exists to make a later function actually work. */
+    /* Adds function for event listener on container div that gives the selected car element a class of "selectedCar".
+    This will apply different styling from CSS file. */
 
     newCarLot.changeClassForStyle = function() {
         for (var i = 0; i < carDiv.length; i++) {
@@ -20,18 +18,6 @@ var CarLot = (function(newCarLot) {
         };
     };
 
-    /* Adds function for event listener on container element that loops through all car elements on page and checks for the element
-    passed into the function. If one is found, it modifies the border to a preset value and changes the background 
-    color to one also passed in as the second arguement of the function. */
-
-    newCarLot.styleChanger = function(element, color) {
-        for (var i = 0; i < carDiv.length; i++) {
-            if (carDiv[i].classList.contains(element)) {
-                carDiv[i].style.borderWidth = "thick";
-                carDiv[i].style.backgroundColor = color;
-            };
-        };
-    };
 
     /* Adds function for event listener in eventiife.js that focuses the text input element and clears it's contents
     upon user clicking a car element */

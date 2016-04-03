@@ -16,7 +16,7 @@ function populatePage(inventory) {
             if (inventory[i].purchased) {
                 carString += sold;
             }
-            carString += `" style="border: 3px solid ${inventory[i].color};">`;
+            carString += `" style="border-color: ${inventory[i].color};">`;
             carString += `<h1>${inventory[i].make}</h1>`;
             carString += `<h2>${inventory[i].model}</h2>`;
             carString += `<h4>Year: ${inventory[i].year}</h4>`;
