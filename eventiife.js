@@ -1,7 +1,6 @@
 var CarLot = (function(newCarLot) {
 
-    /* This function runs all the event listeners contained in the colorBorderIIFE.js file. No reason to really 
-    separate them this way, but was just playing around with IIFE's :) */
+    /* This function runs all the functions contained in the colorBorderIIFE.js file. */
 
     newCarLot.activateEvents = function() {
         container.addEventListener("click", function() {
