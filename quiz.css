@@ -1,0 +1,40 @@
+body {
+  text-align: center;
+}
+
+.car {
+  border-style: solid;
+  border-width: medium;
+  background-color: #f0f0f0;
+  padding: 0px;
+}
+
+.sold {
+  position: relative;
+  opacity: 0.6
+}
+
+.blankImg {
+  opacity: 0;
+  background-image: url(blank.png);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.soldImg {
+  background-image: url(sold.png);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.selectedCar {
+  border-width: thick;
+  background-color: lightblue;
+}
+

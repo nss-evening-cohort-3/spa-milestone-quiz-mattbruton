@@ -1,0 +1,31 @@
+{
+  "cars": [
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "8999",
+      "color": "FireBrick",
+      "purchased": true,
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "AMC",
+      "model": "Pacer",
+      "year": "1978",
+      "price": "699",
+      "color": "Brown",
+      "purchased": false,
+      "description": "It had seats... Sometimes it starts up, which is great when you want to get away!"
+    },
+    {
+      "make": "De Lorean",
+      "model": "DMC-12",
+      "year": "1981",
+      "price": "6999",
+      "color": "Grey",
+      "purchased": false,
+      "description": "If my calculations are correct, when this baby hits 88 miles per hour... you're gonna see some serious shit."
+    }
+  ]
+}
